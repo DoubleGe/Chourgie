@@ -4,7 +4,7 @@ module.exports.run = async(bot, message, args) => {
 
     var servericon = message.guild.iconURL();
         var botIcon = bot.user.displayAvatarURL();
-        let guildname = guild.name
+        var guildname = message.guild.name
         var serverEmbed = new discord.MessageEmbed()
             .setTitle("Server info")
             .setColor("#0b84b8")
