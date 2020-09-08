@@ -3,7 +3,7 @@ const lang = require("../lang.json");
 
 module.exports.run = async (bot, message, args) => {
 
-    if (message.guild.id != "687654086761381934") return message.reply("Sorry, dit command is op deze server disabled.")
+    if (message.guild.id != "687654086761381934" && message.guild.id != "442743221827797012") return message.reply("Sorry, dit command is op deze server disabled.")
 
     if (!args[0]) return message.reply("Gebruik ;code [code]");
 
