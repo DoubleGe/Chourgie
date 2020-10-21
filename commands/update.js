@@ -32,7 +32,7 @@ module.exports.run = async (bot, message, args) => {
     }else {
         return message.channel.send("Gebruik ;update **[versie]** (Voorbeeld ;update 111 (1.1.1).)")
     }
-}
+} //Twitch command
 
 module.exports.help = {
     name: 'update',
