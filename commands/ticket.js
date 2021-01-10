@@ -44,7 +44,7 @@ module.exports.run = async (bot, message, args) => {
     
     message.guild.channels.create(userName.toLowerCase() + "-" + userDiscriminator, {type: 'text'}).then(
         (createdChannel) => {
-            createdChannel.setParent(categoryID).then(
+            createdChannel.setParent(catID).then(
                 (setParent) => {
                     setParent.updateOverwrite(message.guild.roles.cache.find(x => x.name === '@everyone'),{
                         SEND_MESSAGES: false,
