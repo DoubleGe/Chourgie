@@ -4,6 +4,7 @@ const lang = require("../lang.json");
 module.exports.run = async (bot, message, args) => {
 
     const categoryID = "728344160628899871";
+    var catID;
     var botIcon = bot.user.displayAvatarURL();
 
     var userName = message.author.username;
@@ -21,6 +22,9 @@ module.exports.run = async (bot, message, args) => {
     });
 
     if(ticketExist) return;
+
+    if(message.guild.channels.find(cat => cat.name.toLowerCase() === "ticket")) catID = message.guild.channels.find(cat => cat.name.toLowerCase() === "tickets").id;
+    else catID = categoryID;
 
     if(args[0]){
         var text = args.join(" ").slice(7);
