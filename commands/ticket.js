@@ -23,7 +23,8 @@ module.exports.run = async (bot, message, args) => {
 
     if(ticketExist) return;
 
-    if(server.channels.cache.findd(cat => cat.name.toLowerCase() === "ticket")) catID = server.channels.cache.find(cat => cat.name.toLowerCase() === "tickets").id;
+    var guild = message.guild;
+    if(guild.channels.cache.find(cat => cat.name.toLowerCase() === "tickets")) catID = guild.channels.cache.find(cat => cat.name.toLowerCase() === "tickets").id;
     else catID = categoryID;
 
     if(args[0]){
@@ -51,6 +52,16 @@ module.exports.run = async (bot, message, args) => {
                         VIEW_CHANNEL: false
                     });
                     setParent.updateOverwrite(message.author.id,{
+                        CREATE_INSTANT_INVITE: false,
+                        READ_MESSAGES: true,
+                        SEND_MESSAGES: true,
+                        ATTACH_FILES: true,
+                        CONNECT: true,
+                        ADD_REACTIONS: true,
+                        VIEW_CHANNEL: true,
+                        READ_MESSAGES_HISTORY: true
+                    });
+                    if(message.guild.roles.cache.find(x => x.name.toLowerCase() === 'survival support')) setParent.updateOverwrite(message.guild.roles.cache.find(x => x.name.toLowerCase() === 'survival support'),{
                         CREATE_INSTANT_INVITE: false,
                         READ_MESSAGES: true,
                         SEND_MESSAGES: true,

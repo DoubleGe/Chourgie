@@ -7,8 +7,12 @@ module.exports.run = async (bot, message, args) => {
     var botIcon = bot.user.displayAvatarURL();
 
     //if(!message.member.hasPermission("MANNAGE_MESSAGES")) return message.reply(lang.NO_PERMISSION);
+    var catID;
+    var guild = message.guild;
+    if(guild.channels.cache.find(cat => cat.name.toLowerCase() === "tickets")) catID = guild.channels.cache.find(cat => cat.name.toLowerCase() === "tickets").id;
+    else catID = categoryID;
 
-    if(message.channel.parentID == categoryID){
+    if(message.channel.parentID == catID){
         message.channel.delete();
     } else{
         message.channel.send("Dit command kan je alleen gebruiken in een geopende ticket.");
