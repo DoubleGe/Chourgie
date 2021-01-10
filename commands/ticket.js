@@ -23,7 +23,7 @@ module.exports.run = async (bot, message, args) => {
 
     if(ticketExist) return;
 
-    if(message.guild.channels.find(cat => cat.name.toLowerCase() === "ticket")) catID = message.guild.channels.find(cat => cat.name.toLowerCase() === "tickets").id;
+    if(message.guild.channels.cache.find(cat => cat.name.toLowerCase() === "ticket")) catID = message.guild.channels.cache.find(cat => cat.name.toLowerCase() === "tickets").id;
     else catID = categoryID;
 
     if(args[0]){
