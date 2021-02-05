@@ -28,7 +28,7 @@ module.exports.run = async (bot, message, args) => {
     else catID = categoryID;
 
     if(args[0]){
-        var text = args.join(" ").slice(7);
+        var text = args.join(" ");
 
         var embed = new discord.MessageEmbed()
         .setTitle("Ticket Created")
@@ -73,7 +73,7 @@ module.exports.run = async (bot, message, args) => {
                     });
 
                     var ticketTopic;
-                    if(args[0]) ticketTopic = args[0];
+                    if(args[0]) ticketTopic = args.join(" ");
                     else ticketTopic = "geen onderwerp opgegeven.";
                     var embedParent = new discord.MessageEmbed()
                     .setTitle(`Hallo ${message.author.username}`)
