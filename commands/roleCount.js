@@ -14,6 +14,6 @@ module.exports.run = async (bot, message, args) => {
 
 module.exports.help = {
     name: 'rolecount',
-    desc: "Ik zeg Hallo tegen jou.",
+    desc: "Geeft het aantal members weer die een rol hebben.",
     cat: "Algemeen"
 }

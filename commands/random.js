@@ -20,7 +20,7 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-    name: 'hallo',
-    desc: "Ik zeg Hallo tegen jou.",
+    name: 'random',
+    desc: "Random.",
     cat: "Algemeen"
 }
