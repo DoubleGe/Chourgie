@@ -16,7 +16,7 @@ module.exports.run = async (bot, message, args) => {
     } else if (code == "while"){
         return message.channel.send('**While:** https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/while\n```csharp\nwhile (ExampleBool == true) || (ExampleString == "String Example") || (ExampleInt == 4)\n{\n    [Code];\n}```')
     } else if (code == "each") {
-        return message.channel.send("**For Earch:** https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/foreach-in")
+        return message.channel.send("**For Each:** https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/foreach-in")
     } else if (code == "function") {
         return message.channel.send("**Functions:** https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/methods\n```csharp\nFunction void/int Example()\n{\n    return [var];(Bij gebruik van int)\n}```") 
     } else if (code == "class") {

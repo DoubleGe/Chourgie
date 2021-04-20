@@ -10,7 +10,7 @@ module.exports.run = async(bot, message, args) => {
             .setColor("#0b84b8")
             .setThumbnail(servericon)
             .addFields(
-                {name: "Discord server naam: ", vallue: guildname},
+                {name: "Discord server naam: ", value: guildname},
                 {name: "Jij bent gejoined op: ", value: message.member.joinedAt},
                 {name: "Totaal aantal members: ", value: message.guild.memberCount}
             )

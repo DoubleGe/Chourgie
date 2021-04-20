@@ -18,7 +18,7 @@ module.exports.run = async (bot, message, args) => {
             } else if (args[0] == 1) {
                 message.reply(`Ik heb een ${args[0]} bericht verwijderd.`).then(msg => msg.delete({ timeout: 3000 }));
             } else if (args[0] > 1) {
-                message.reply(`Ik heb een ${args[0]} berichten verwijderd.`).then(msg => msg.delete({ timeout: 3000 }));
+                message.reply(`Ik heb ${args[0]} berichten verwijderd.`).then(msg => msg.delete({ timeout: 3000 }));
             }
 
         })

@@ -64,7 +64,7 @@ bot.on("message", async message => {
 
     if (message.author.bot) return;
 
-    if (message.channel.type == "dm") return;
+    if (message.channel.type == "dm" && !message.content.toLowerCase() === ";among death") return;
 
 
 
@@ -106,7 +106,7 @@ bot.on("message", async message => {
         }
     }
 
-    if(amountControlWords != 0){
+    if(amountControlWords != 0 && message.member.id != "241247327824642051"){
         message.delete();
         message.channel.send(sentenceUser).then(msg => msg.delete({timeout: 5000}))
         message.channel.send("Gebruik deze taal niet.").then(msg => msg.delete({timeout: 5000}))
